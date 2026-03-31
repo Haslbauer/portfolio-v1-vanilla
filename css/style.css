@@ -1,0 +1,189 @@
+:root {
+    /* Farben */
+    --primary-color: #2563eb;       /* Ein seriöses Blau */
+    --secondary-color: #64748b;
+    --bg-color: #ffffff;
+    --text-color: #1e293b;
+    --header-bg: rgba(255, 255, 255, 0.95);
+    
+    /* Abstände & Layout */
+    --container-width: 1100px;
+    --transition: all 0.3s ease;
+}
+
+/* Vorbereitung für Darkmode (wird später per JS aktiviert) */
+[data-theme="dark"] {
+    --bg-color: #0f172a;
+    --text-color: #f1f5f9;
+    --header-bg: rgba(15, 23, 42, 0.95);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    transition: var(--transition);
+}
+
+header {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: var(--header-bg);
+    backdrop-filter: blur(8px); /* Moderner Glass-Effekt */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+nav.container { /* Wir nutzen eine Container-Klasse für die Breite */
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 1rem 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo {
+    height: 40px; /* Passe die Höhe deines Logos an */
+    width: auto;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+nav ul li a:hover {
+    color: var(--primary-color);
+}
+
+#toggle_darkmode {
+    padding: 8px 16px;
+    cursor: pointer;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+
+section {
+    padding: 100px 20px;
+    max-width: var(--container-width);
+    margin: 0 auto;
+}
+
+#hero {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.highlight {
+    color: var(--primary-color);
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 50px;
+    margin-top: 40px;
+}
+
+/* Responsive Fix für Handys */
+@media (max-width: 768px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    nav ul {
+        display: none; /* Hier müsste man später ein Burger-Menü bauen */
+    }
+}
+
+/* Container für alle Karten */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+/* Die einzelne Karte */
+.project-card {
+    background-color: var(--bg-color);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    height: 100%;
+}
+
+/* Der Hover-Effekt: Karte hebt sich leicht an */
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    border-color: var(--primary-color);
+}
+.project-card h3 {
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+.project-card p {
+    font-size: 0.95rem;
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+    flex-grow: 1; /* Sorgt dafür, dass die Links immer unten bündig sind */
+}
+
+/* Die Liste der Technologien */
+.tech-tags {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.tech-tags li {
+    background: #f1f5f9;
+    color: #475569;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+/* Darkmode Anpassung für die Tags */
+[data-theme="dark"] .tech-tags li {
+    background: #334155;
+    color: #f1f5f9;
+}
