@@ -54,6 +54,8 @@ nav.container { /* Wir nutzen eine Container-Klasse für die Breite */
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 #logo {
@@ -92,13 +94,13 @@ nav ul li a:hover {
 
 
 section {
-    padding: 100px 20px;
+    padding: 80px 20px;
     max-width: var(--container-width);
     margin: 0 auto;
 }
 
 #hero {
-    height: 80vh;
+    min-height: 80vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -118,15 +120,112 @@ section {
 }
 
 /* Responsive Fix für Handys */
-@media (max-width: 768px) {
-    .about-grid {
-        grid-template-columns: 1fr;
+
+@media (max-width: 480px) {
+    #hero h1 {
+        font-size: 1.7rem;
     }
-    
+
+    #hero h2 {
+        font-size: 1.05rem;
+    }
+
+    .project-card {
+        padding: 20px;
+    }
+
+    .tech-tags {
+        gap: 8px;
+    }
+
+    .tech-tags li {
+        font-size: 0.75rem;
+        padding: 4px 10px;
+    }
+
+    #contact-form .cta-primary {
+        width: 100%;
+        align-self: stretch;
+    }
+}
+
+@media (max-width: 768px) {
+    nav.container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    #logo {
+        height: 32px;
+    }
+
     nav ul {
         flex-direction: column;
         gap: 0.75rem;
         align-items: center;
+        width: 100%;
+    }
+
+    #toggle_darkmode {
+        width: 100%;
+        max-width: 220px;
+    }
+
+    section {
+        padding: 60px 16px;
+    }
+
+    #hero {
+        min-height: auto;
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    #hero h1 {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+
+    #hero h2 {
+        font-size: 1.2rem;
+    }
+
+    .project-card {
+        padding: 24px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-logo {
+        height: 36px;
+    }
+}
+
+@media (max-width: 900px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    #hero {
+        min-height: 70px;
+    }
+
+    section {
+        padding: 70px 20px; 
+    }
+    
+    
+    nav ul {       
+        gap: 1.25rem;;
+    }
+
+    .projects-grids {
+        grid-template-columns: 1fr;
     }
 }
 
