@@ -284,3 +284,17 @@ textarea {
 #contact-form .cta-primary:active {
     transform: translateY(0);
 }
+
+/* Vorbereitung für das Einblenden */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+}
+
+/* Aktiver Zustand (wird per JS hinzugefügt) */
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+

@@ -21,7 +21,7 @@
 </header>
 
 <main>
-<section id="hero">
+<section id="hero" class="reveal">
     <div class="hero-content">
         <p class="pre-title">Berufserfahrung trift auf neue Leidenschaft</p>
         <h1>Vom Ausbilder zum <span class="highlight">Auszubildenden</span></h1>
@@ -41,7 +41,7 @@
         <a href="#about" class="cta-secondary">Über mich</a>
     </div>
 </section>
-<section id="about">
+<section id="about" class="reveal">
     <div class="container">
         <h2>Über mich</h2>
         <div class="about-grid">
@@ -69,7 +69,7 @@
         </div>
     </div>
 </section>
-<section id="projects">
+<section id="projects" class="reveal">
     <div class="container">
         <h2>Projekte</h2>
         <p>Hier folgen meine ersten Projekte in der Anwendungsentwicklung.</p>
@@ -82,19 +82,35 @@
             </div>
         </card>
         <card class="project-card">
-            <h3>Projekt 2: To-Do List App</h3>
-            <p>Beschreibung: Erstellung einer einfachen To-Do List App mit JavaScript, um grundlegende Programmierkenntnisse zu vertiefen.</p>
+            <h3>Projekt 2: Little Lemon React App</h3>
+            <p>Beschreibung: Erstellung einer React-Anwendung für ein kleines Restaurant.</p>
             <a href="#" class="cta-primary">Zum Projekt</a>
+            <div class="project-links">
+                    <a href="https://github.com/Haslbauer/Little-Lemon-React-App" target="_blank" rel="noopener noreferrer">Code auf GitHub ansehen</a>
+            </div>
         </card>
 
     <card class="project-card">
-        <h3>Projekt 3: Python Web Scraper</h3>
-        <p>Beschreibung: Entwicklung eines Web Scrapers in Python, um Daten von einer öffentlichen Website zu extrahieren und zu analysieren.</p>
+        <h3>Projekt 3: Grocery Shopping Java App</h3>
+        <p>Beschreibung: Java-Konsolenprojekt zur Simulation einer einfachen Einkaufsliste.</p>
+        <a href="#" class="cta-primary">Zum Projekt</a>
+        <div class="project-links">
+                    <a href="https://github.com/Haslbauer/grocery-shopping-java" target="_blank" rel="noopener noreferrer">Code auf GitHub ansehen</a>
+        </div> 
+    </card>
+
+     <card class="project-card">
+        <h3>Projekt 4: Shark Attack Data Visualization</h3>
+        <p>Beschreibung: Datenprojekt in Python zur Bereinigung, Analyse und Visualisierung eines realen Datensatzes
+    zu Haiangriffen.</p>
         <a href="#" class="cta-primary">Zum Projekt</a> 
+        <div class="project-links">
+                    <a href="https://github.com/Haslbauer/shark-attack-data-visualization" target="_blank" rel="noopener noreferrer">Code auf GitHub ansehen</a>
+        </div> 
     </card>
     </div>
 </section>
-<section id="contact">
+<section id="contact" class="reveal">
     <div class="container">
         <h2>Kontakt</h2>
         <p>Haben Sie Interesse an einer Zusammenarbeit? Kontaktieren Sie mich!</p>
@@ -116,7 +132,10 @@
 
             <input type="text" name="_gotcha" style="display:none">
 
-            <button type="submit" class="cta-primary">Nachricht senden</button>
+            <button type="submit" id="submit-btn"class="cta-primary">Nachricht senden</button>
+            <div id="form-status" style="display: none; margin-top: 20px; padding: 15px; border-radius: 8px;">
+
+            </div>
         </form>
 
     </div>
