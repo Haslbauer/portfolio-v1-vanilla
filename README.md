@@ -1,23 +1,42 @@
-# Developer Portfolio
+# Portfolio Website (Vanilla)
 
-Willkommen in meinem Repository! Dies ist die erste Version meiner Portfolio-Homepage, die ich komplett ohne Frameworks entwickelen werde.
+A personal portfolio website built with HTML, CSS, and JavaScript.
 
-## Projektziel
-Dieses Projekt dient dazu, mein Verständnis für die Kerntechnologien des Webs zu demonstrieren. Ich setze den Fokus auf:
-* **Saubere Semantik:** Barrierefreies HTML5.
-* **Modernes CSS:** Responsives Design mit Flexbox und Grid (ohne Bootstrap & Co.).
-* **DOM-Manipulation:** Interaktive Elemente mit nativem JavaScript.
-* **Dokumentation:** Nachvollziehbarer Code und strukturierte Commits.
+This project was created to strengthen my frontend fundamentals without relying on frameworks. The focus was on semantic HTML, responsive layout, clear structure, and building a simple and maintainable website from scratch.
 
-## Tech-Stack
-* HTML5 (Semantik & Struktur)
-* CSS3 (Custom Properties, Flexbox, Grid)
-* JavaScript (ES6+)
+## Features
+- Responsive website layout
+- Semantic HTML structure
+- Custom styling with CSS
+- Basic interactivity with JavaScript
+- Clear project structure for maintainability
+- Foundation for a personal developer portfolio
 
-## Roadmap
-- [ ] Grundgerüst & Navigationskonzept (MVP)
-- [ ] Responsive Design für Mobile & Desktop
-- [ ] Dark Mode Implementation
-- [ ] Kontaktformular mit Validierung der Nutzereingaben
-- [ ] Deployment via GitHub Pages
-- [ ] **Next Step:** Refactoring der gesamten Seite als React-App (V2)
+## Tech Stack
+- HTML
+- CSS
+- JavaScript
+
+## What I Learned
+- Structuring a website with semantic HTML
+- Building responsive layouts with CSS
+- Organizing frontend code without a framework
+- Adding simple interactivity with JavaScript
+- Creating a maintainable project structure
+- Planning and improving a project step by step
+
+## Possible Improvements
+- Add more project sections and case studies
+- Improve accessibility
+- Refine animations and transitions
+- Add a contact form
+- Expand the site with additional pages
+- Rebuild the project later with React for comparison
+
+## How to Run
+
+Clone the repository and open the `index.html` file in your browser.
+
+```bash
+git clone https://github.com/Haslbauer/portfolio-v1-vanilla.git
+cd portfolio-v1-vanilla
