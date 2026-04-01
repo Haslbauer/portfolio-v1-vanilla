@@ -5,6 +5,7 @@
     --bg-color: #ffffff;
     --text-color: #1e293b;
     --header-bg: rgba(255, 255, 255, 0.95);
+    --footer-background: rgba(30, 41, 59, 0.95);;
     
     /* Abstände & Layout */
     --container-width: 1100px;
@@ -56,8 +57,10 @@ nav.container { /* Wir nutzen eine Container-Klasse für die Breite */
 }
 
 #logo {
-    height: 40px; /* Passe die Höhe deines Logos an */
+    display: block;
+    height: 35px;
     width: auto;
+    object-fit: contain;
 }
 
 nav ul {
@@ -121,7 +124,9 @@ section {
     }
     
     nav ul {
-        display: none; /* Hier müsste man später ein Burger-Menü bauen */
+        flex-direction: column;
+        gap: 0.75rem;
+        align-items: center;
     }
 }
 
@@ -298,3 +303,24 @@ textarea {
     transform: translateY(0);
 }
 
+.footer-container {
+    display: flex;
+    flex-direction : row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    background-color: var(--footer-background);
+}
+.footer-logo {
+    display: block;
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+}
+
+.footer-text {
+    color: #f1f5f9;
+    font-size: 0.9rem;
+    
+}
