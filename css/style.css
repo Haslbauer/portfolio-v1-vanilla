@@ -58,7 +58,8 @@ nav.container { /* Wir nutzen eine Container-Klasse für die Breite */
     flex-wrap: wrap;
 }
 
-#logo {
+#header-logo,
+.header-logo {
     display: block;
     height: 35px;
     width: auto;
