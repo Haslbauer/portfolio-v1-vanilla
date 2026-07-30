@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.documentElement.setAttribute('data-theme', theme);
         
         // Auswahl dauerhaft im Browser speichern
-        localStorage.getItem('theme', theme);
+        localStorage.setItem('theme', theme);
         
         updateButtonText(theme);
     });
